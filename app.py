@@ -37,7 +37,7 @@ def post_delete(id):
 
     try:
         db.session.delete(article)
-        db.commit()
+        db.session.commit()
         return redirect('/posts')
     except:
         return 'При удалении статьи произошла ошибка'
